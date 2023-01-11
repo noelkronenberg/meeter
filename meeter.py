@@ -39,8 +39,8 @@ class Matches:
             if current_person.id == self.person.id: continue # skip if the same person
             score = 0
             # add points for similarities
-            if (current_person.degree == self.person.degree): score += 50 # if same degree, add 50 points
-            if len(self.person.interests) != 0: score += (sum(x == y for x, y in zip(self.person.interests, current_person.interests)) / len(self.person.interests)) * 50 # if same interests, add points in relation to overlap (up to 50) (reference: https://www.geeksforgeeks.org/python-count-of-common-elements-in-the-lists/)
+            if (self.person.degree != '') & (current_person.degree == self.person.degree): score += 50 # if same degree, add 50 points
+            if (self.person.interests != []): score += (sum(x == y for x, y in zip(self.person.interests, current_person.interests)) / len(self.person.interests)) * 50 # if same interests, add points in relation to overlap (up to 50) (reference: https://www.geeksforgeeks.org/python-count-of-common-elements-in-the-lists/)
             scores.update({current_person.id: score}) # add to res with score
         # get actual matches
         matches = dict(filter(lambda val: val[1] > 25.0, scores.items())) # remove with score below 25 (reference: https://thispointer.com/python-filter-a-dictionary-by-conditions-on-keys-or-values/)
@@ -87,4 +87,4 @@ people = [
 
 for person in people:
     print(person.matches)
-    print('')
+    print('')    print('')
