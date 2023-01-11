@@ -133,6 +133,7 @@ input {
     border-color: var(--color-1);
     padding: 13px 0px;
     font-size: var(--font-size-2);
+    border-radius: 0px;
 }
 
 .input-field:hover, .input-field:focus {
