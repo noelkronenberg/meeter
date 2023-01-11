@@ -10,7 +10,7 @@ global person # current person
 def inputs():
     if request.method == "POST":
         global person # current person
-        person = meeter.Person(request.form["name_input"], request.form["degree_input"], request.form.getlist('interests_input')) # assign inputs
+        person = meeter.Person(str(request.form["name_input"]), str(request.form["degree_input"]), request.form.getlist('interests_input')) # assign inputs
         meeter.people.append(person) # add to database
         return redirect("/matches/")
     else:
