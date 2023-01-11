@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+:root {
+    --color-1: #000; 
+    --color-2: #fff;
+    --color-3: #fb8500;
+    --color-4: #bcbcbc;
+    --color-5: #F3F3F3;
+
+    --font: Helvetica, sans-serif;
+
+    --font-size-1: 40px;
+    --font-size-2: 24px;
+    --font-size-3: 16px;
+
+    --content-width: 85%;
+    --max-content-width: 500px;
+
+    --radius: 8px;
+    --border: 2px solid var(--color-1);
+}
+
+/* START: Typograpghy */
+
+h1, h2, h3, a, p, label, li {
+    font-family: var(--font);
+}
+
+h1 {
+    font-size: var(--font-size-1);
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+h2 {
+    font-size: var(--font-size-2);
+}
+
+h3, a, p, label, li {
+    font-size: var(--font-size-3);
+}
+
+/* END: Typograpghy */
+
+/* START: Layout */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    /* padding: 0px 25px 0px 25px; */
+    max-width: var(--max-content-width);
+    width: var(--content-width);
+    margin: 0px auto 100px auto;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* END: Layout */
+
+/* START: Buttons */
+
+.button, .checkbox input[type="checkbox"] + label {
+    cursor: pointer;
+    background-color: var(--color-1);
+    border: var(--border);
+    border-color: var(--color-1) !important;
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+    color: var(--color-2);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: calc(var(--font-size-2)*0.9);
+}
+
+.button:hover, .checkbox input[type="checkbox"]:hover + label:hover {
+    background-color: var(--color-2) !important;
+    border-color: var(--color-3) !important;
+    color: var(--color-1);
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+    background-color: var(--color-2) !important;
+    border-color: var(--color-3) !important;
+    color: var(--color-1);
+}
+
+/* END: Buttons */
+
+/* START: Input */
+
+input {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+::placeholder { 
+    color: var(--color-1);
+  }
+
+.input-form p {
+    width: 100%;
+    margin: 0px;
+}
+
+.input-field {
+    text-align: left;
+    background-color: var(--color-2); 
+
+    color: var(--color-1);
+    outline: none; 
+    width: 100%;
+    margin-bottom: 5px;
+    cursor: text;
+
+    border: none;
+    border-bottom: var(--border);
+    border-bottom-width: 3px;
+    border-color: var(--color-1);
+    padding: 13px 0px;
+    font-size: var(--font-size-2);
+}
+
+.input-field:hover, .input-field:focus {
+    border-color: var(--color-3) !important;
+}
+
+.input-field:hover::placeholder, .input-field:focus::placeholder {
+    color: var(--color-4)
+}
+
+.input-button {
+    background-color: var(--color-3) !important;
+    border-color: var(--color-3) !important;
+}
+
+.input-button:hover {
+    cursor: pointer;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    width: 100%;
+    gap: 50px;
+    margin-top: 25px;
+}
+
+.checkbox input[type=checkbox] {
+    display: none;
+}
+
+.checkboxes {
+    margin: 7px 0px;
+    display: flex;
+    flex-direction: row;
+    max-width: 30vw;
+    min-width: 100%;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 7px;
+}
+
+h2.category-title {
+    margin: 0px;
+}
+
+.category-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    width: 100%;
+    gap: 15px;
+}
+
+/* END: Input */
+
+/* START: Matches */
+
+.matches {
+    width: 100%;
+}
+
+.matches :last-child {
+    border-bottom: none !important;
+    margin-bottom: 0px;
+}
+
+p.match {
+    font-size: 20px;
+    margin: 10px 0px 10px 0px;
+
+    padding: 15px 25px 15px 25px;
+    border-radius: var(--radius);
+    background-color: var(--color-5);
+}
+
+/* END: Matches */

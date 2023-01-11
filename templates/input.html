@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Meeter</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='icon.jpg') }}">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+
+                <h1>
+                    Tell us about yourself.
+                </h1>
+
+                <form action="#" method="post" class="input-form">
+
+                    <p><input type="text" name="name_input" placeholder="Name" class="input-field" required/></p>
+                    <p><input type="text" name="degree_input" placeholder="Degree" class="input-field" required/></p>
+
+                    <div class="category-wrapper">
+                        <h2 class="category-title">Interests</h2>
+
+                        <div class="checkboxes">
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="interests_input_1" name="interests_input" value="Literature">
+                                <label for="interests_input_1">Literature</label><br>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="interests_input_2" name="interests_input" value="Music">
+                                <label for="interests_input_2">Music</label><br>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="interests_input_3" name="interests_input" value="Party">
+                                <label for="interests_input_3">Party</label><br>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="interests_input_4" name="interests_input" value="Museums">
+                                <label for="interests_input_4">Museums</label><br>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="interests_input_5" name="interests_input" value="Science">
+                                <label for="interests_input_5">Science</label><br>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="interests_input_6" name="interests_input" value="History">
+                                <label for="interests_input_6">History</label><br>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <p><input type="submit" value="Continue" class="input-button button"/></p>
+
+                </form>
+
+            </div>
+
+        </div>
+    </body>
+</html>

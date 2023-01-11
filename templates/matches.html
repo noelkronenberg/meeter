@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Meeter</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='icon.jpg') }}">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+
+                <h1>
+                    Your matches: {{test}} {{test2}}
+                </h1>
+
+                <div class="matches">
+                    <p class="match">{{first_match}}</p>
+                    <p class="match">{{second_match}}</p>
+                    <p class="match">{{third_match}}</p>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>
