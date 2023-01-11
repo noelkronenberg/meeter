@@ -1,15 +1,14 @@
 {
-    "version": 2,
     "builds": [
         {
-            "src": "*.py",
-            "use": "@noelkronenberg/meeter"
+        "src": "/(.*)",
+        "use": "@noelkronenberg/meeter"
         }
     ],
     "routes": [
         {
-            "src": "(.*)",
-            "dest": "app.py"
+        "src": "/(.*)",
+        "dest": "app.py"
         }
     ]
-  }
+}
