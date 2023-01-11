@@ -1,13 +1,7 @@
 {
-    "builds": [
-        {
-        "src": "/(.*)",
-        "use": "@noelkronenberg/meeter"
-        }
-    ],
     "routes": [
         {
-        "src": "/(.*)",
+        "src": "/",
         "dest": "app.py"
         }
     ]
