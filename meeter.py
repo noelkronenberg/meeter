@@ -54,13 +54,13 @@ class Matches:
 
     # get best matches, false if not enough matches
     def get_first(self):
-        if not self.has_matched(1): return False 
+        if not self.has_matched(1): return 'No match' 
         return get_person(list(self.get_matches().keys())[0])
     def get_second(self):
-        if not self.has_matched(2): return False
+        if not self.has_matched(2): return 'No second match'
         return get_person(list(self.get_matches().keys())[1])
     def get_third(self):
-        if not self.has_matched(3): return False 
+        if not self.has_matched(3): return 'No third match'
         return get_person(list(self.get_matches().keys())[2])
 
     # present matches
