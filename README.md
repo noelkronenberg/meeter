@@ -8,7 +8,7 @@ Users have to enter general information about themselves. The algorithm will the
 
 ## Set-up
 
-> You may try a demo version [here](noelkronenberg.pythonanywhere.com) (last commit: ce1db6d)
+> You may try a demo version [here](http://noelkronenberg.pythonanywhere.com) (last commit: ce1db6d)
 
 1. requirements: 
     - Python (tested: 3.9.10)
