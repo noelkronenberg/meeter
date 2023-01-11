@@ -18,7 +18,7 @@ class Person:
         return self.name
 
     def get_matches(self):
-        return self.matches.view()
+        return print(self.matches)
 
 # get person via id
 def get_person(id:int):
@@ -64,14 +64,11 @@ class Matches:
         return get_person(list(self.get_matches().keys())[2])
 
     # present matches
-    def view(self):
-        if self.has_matched(1):
-            print(f'The matches for {self.person.name} are: ')
-            print('First: ' + str(self.get_first()))
-            if self.has_matched(2): print('Second: ' + str(self.get_second()))
-            if self.has_matched(3): print('Third: ' + str(self.get_third()))
-        else: print(f'{self.person.name} has no matches!')
-
+    def __str__(self):
+        res = f'{self.person.name} has no matches!'
+        if self.has_matched(1): res = f'The matches for {self.person.name} are:\nFirst: {str(self.get_first())}\nSecond: {str(self.get_second())}\nThird: {str(self.get_third())}'
+        return res
+            
 # DEMO:
 
 # fill people database
@@ -89,5 +86,5 @@ people = [
 # view matches
 
 for person in people:
+    print(person.matches)
     print('')
-    person.get_matches()
