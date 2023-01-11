@@ -15,3 +15,8 @@ Users have to enter general information about themselves. The algorithm will the
     - ```pip install -r requirements.txt```
 2. start application: ```python3 app.py```
 3. open application: http://127.0.0.1:5000
+
+## Showcase
+
+https://user-images.githubusercontent.com/79874249/211909765-2a5325af-e242-464d-a5f7-4087dd57c581.mp4
+
