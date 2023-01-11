@@ -68,27 +68,3 @@ class Matches:
         res = f'{self.person.name} has no matches!'
         if self.has_matched(1): res = f'The matches for {self.person.name} are:\nFirst: {str(self.get_first())}\nSecond: {str(self.get_second())}\nThird: {str(self.get_third())}'
         return res
-            
-"""
-
-# DEMO:
-
-# fill people database
-
-people = [
-    Person('Mike', 'IT', ['Racing', 'Sports']),
-    Person('Sophie', 'IT', ['Racing', 'Sports', 'Dancing']),
-    Person('Max', 'Literature', ['Dancing']),
-    Person('Lilly', 'Literature', ['Dancing']),
-    Person('Tom', 'IT', ['Dancing']),
-    Person('Lukas', 'IT', ['Racing', 'Sports']),
-    Person('Laila', 'History'),
-    Person('Emil')]
-
-# view matches
-
-for person in people:
-    print(person.matches)
-    print('')
-
-"""
