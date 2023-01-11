@@ -69,6 +69,8 @@ class Matches:
         if self.has_matched(1): res = f'The matches for {self.person.name} are:\nFirst: {str(self.get_first())}\nSecond: {str(self.get_second())}\nThird: {str(self.get_third())}'
         return res
             
+"""
+
 # DEMO:
 
 # fill people database
@@ -87,4 +89,6 @@ people = [
 
 for person in people:
     print(person.matches)
-    print('')    print('')
+    print('')
+
+"""
