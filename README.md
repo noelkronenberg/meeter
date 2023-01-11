@@ -13,5 +13,5 @@ Users have to enter general information about themselves. The algorithm will the
 1. requirements: 
     - Python (tested: 3.9.10)
     - ```pip install -r requirements.txt```
-2. start application: ```python3 web.py```
+2. start application: ```python3 app.py```
 3. open application: http://127.0.0.1:5000
