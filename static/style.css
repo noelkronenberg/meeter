@@ -28,9 +28,11 @@
 @media screen and (max-width: 900px) {
     :root {
     
-        --font-size-1: 34px;
+        --font-size-1: 30px;
         --font-size-2: 18px;
         --font-size-3: 14px;
+
+        --line-height-1: 1.2;
     }
 }
 
@@ -66,7 +68,7 @@ h3, a, p, label, li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 85vh;
     /* padding: 0px 25px 0px 25px; */
     max-width: var(--max-content-width);
     width: var(--content-width);
@@ -109,6 +111,12 @@ h3, a, p, label, li {
     background-color: var(--color-2) !important;
     border-color: var(--color-3) !important;
     color: var(--color-1);
+}
+
+.secondary-button {
+    background-color: var(--color-2) !important;
+    border-color: var(--color-1) !important;
+    color: var(--color-1)
 }
 
 /* END: Buttons */
@@ -251,3 +259,16 @@ p.match {
 }
 
 /* END: Matches */
+
+/* START: Index */
+
+.navigation {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 7px;
+}
+
+/* END: Index */

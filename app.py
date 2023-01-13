@@ -5,8 +5,13 @@ app = Flask(__name__)
 
 global person # current person
 
+# welcome page
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 # get user inputs
-@app.route("/", methods=["POST", "GET"])
+@app.route("/start/", methods=["POST", "GET"])
 def inputs():
     if request.method == "POST":
         global person # current person
