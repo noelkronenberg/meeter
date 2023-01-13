@@ -25,6 +25,15 @@
     --border: 2px solid var(--color-1);
 }
 
+@media screen and (max-width: 900px) {
+    :root {
+    
+        --font-size-1: 34px;
+        --font-size-2: 18px;
+        --font-size-3: 14px;
+    }
+}
+
 /* START: Typograpghy */
 
 h1, h2, h3, a, p, label, li {
@@ -61,7 +70,7 @@ h3, a, p, label, li {
     /* padding: 0px 25px 0px 25px; */
     max-width: var(--max-content-width);
     width: var(--content-width);
-    margin: 0px auto 100px auto;
+    margin: 25px auto 100px auto;
 }
 
 .content {
@@ -190,6 +199,13 @@ h2.category-title {
     align-items: self-start;
     width: 100%;
     gap: 15px;
+}
+
+@media screen and (max-width: 900px) {
+    .input-form {
+        gap: 30px;
+        margin-top: 20px;
+    }
 }
 
 /* END: Input */
