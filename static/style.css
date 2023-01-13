@@ -7,7 +7,7 @@
     --color-1: #000; 
     --color-2: #fff;
     --color-3: #fb8500;
-    --color-4: #bcbcbc;
+    --color-4: #dedbdb;
     --color-5: #F3F3F3;
 
     --font: Helvetica, sans-serif;
@@ -212,6 +212,26 @@ p.match {
     padding: 15px 25px 15px 25px;
     border-radius: var(--radius);
     background-color: var(--color-5);
+}
+
+span.contact-option {
+    background-color: var(--color-4);
+    border-radius: var(--radius);
+    padding: 3px 8px;
+    margin-left: 2px;
+}
+
+img.contact-icon {
+    height: 16px;
+    width: auto;
+}
+
+p.match {
+    line-height: 1.8 !important;
+}
+
+.emoji {
+    font-size: calc(var(--font-size-2)*0.7);
 }
 
 /* END: Matches */
