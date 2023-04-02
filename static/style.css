@@ -272,3 +272,52 @@ p.match {
 }
 
 /* END: Index */
+
+/* START: Confetti */
+
+.confetti {
+    pointer-events: none;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    user-select: none;
+    z-index: 10;
+  
+    /* reference: https://stackoverflow.com/questions/26393539/css-solution-to-hide-div-after-x-amount-of-seconds */
+  
+    -webkit-animation: fadeAway 1.0s forwards;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 3s;
+    animation: fadeAway 1.0s forwards;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
+    }
+  
+  @-webkit-keyframes fadeAway {
+    0% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0%;
+      display: none;
+      bottom: -9999px;
+      z-index: -1;
+    }
+  }
+  
+  @keyframes fadeAway {
+    0% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0%;
+      display: none;
+      bottom: -9999px;
+      z-index: -1;
+    }
+}
+  
+/* END: Confetti */
