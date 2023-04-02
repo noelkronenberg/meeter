@@ -23,9 +23,12 @@ def inputs():
 
 # view matches
 @app.route("/matches/")
-def troubleshooting():
+def matches():
         global person # current person
-        return render_template("matches.html", first_match=person.matches.get_first(), first_phone=person.matches.get_first().phone, second_match=person.matches.get_second(), second_phone=person.matches.get_second().phone, third_match=person.matches.get_third(), third_phone=person.matches.get_third().phone)
+        matches:list[meeter.Person] = []
+        matches = person.matches.get_matches()
+        if matches != []: return render_template("matches.html", matches=matches)
+        else: return render_template("matches.html", notice='No matches yet!')
 
 if __name__ == '__main__':
     app.run(debug=True)

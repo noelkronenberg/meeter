@@ -11,32 +11,22 @@
             <div class="content">
 
                 <h1>
-                    Your matches: {{test}} {{test2}}
+                    Your matches:
                 </h1>
 
                 <div class="matches">
+                    {% for match in matches %}
                     <p class="match">
-                        <span class="match-name">{{first_match}}:</span> 
+                        <span class="match-name">{{ match.name }}</span>
                         <span class="contact-option">
                             <span class="emoji" alt="Phone">&#128222;</span>
-                            {{first_phone}}
+                            {{ match.phone }}
                         </span>
                     </p>
-                    <p class="match">
-                        <span class="match-name">{{second_match}}:</span> 
-                        <span class="contact-option">
-                            <span class="emoji" alt="Phone">&#128222;</span>
-                            {{second_phone}}
-                        </span>
-                    </p>
-                    <p class="match">
-                        <span class="match-name">{{third_match}}:</span> 
-                        <span class="contact-option">
-                            <span class="emoji" alt="Phone">&#128222;</span> 
-                            {{third_phone}}
-                        </span>
-                    </p>
+                    {% endfor %}
                 </div>
+
+                <p>{{ notice }}</p>
 
             </div>
 

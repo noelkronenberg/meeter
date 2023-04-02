@@ -31,8 +31,8 @@ class Matches:
     def __init__(self, person:Person):
         self.person = person
         
-    # get top three matches
-    def get_matches(self):
+    # generate top three matches
+    def generate_matches(self):
         global people # access people database
         # get scores for each person
         scores = {}
@@ -48,24 +48,11 @@ class Matches:
         top_matches = dict(itertools.islice(matches.items(),3)) # get top three (reference: https://theprogrammingexpert.com/slice-dictionary-python/)
         sorted_matches = {val[0]:val[1] for val in sorted(top_matches.items(), key = lambda x : (-x[1], x[0]))} # sort by score (https://www.geeksforgeeks.org/python-sort-dictionary-by-values-and-keys/)
         return sorted_matches
-
-    # true if amount of matches is more or equal
-    def has_matched(self, amount:int):
-        return len(list(self.get_matches().keys())) >= amount
-
-    # get best matches, false if not enough matches
-    def get_first(self):
-        if not self.has_matched(1): return Person('No match', 'n/a')
-        return get_person(list(self.get_matches().keys())[0])
-    def get_second(self):
-        if not self.has_matched(2): return Person('No second match', 'n/a')
-        return get_person(list(self.get_matches().keys())[1])
-    def get_third(self):
-        if not self.has_matched(3): return Person('No third match', 'n/a')
-        return get_person(list(self.get_matches().keys())[2])
-
-    # present matches
-    def __str__(self):
-        res = f'{self.person.name} has no matches!'
-        if self.has_matched(1): res = f'The matches for {self.person.name} are:\nFirst: {str(self.get_first())}\nSecond: {str(self.get_second())}\nThird: {str(self.get_third())}'
-        return res
+    
+    # get matches as list
+    def get_matches(self):
+        matches_dict = self.generate_matches().keys()
+        matches:list[Person] = []
+        for match in matches_dict:
+            matches.append(get_person(match))
+        return matches
