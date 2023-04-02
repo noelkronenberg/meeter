@@ -8,7 +8,7 @@ Users have to enter general information about themselves. The algorithm will the
 
 ## Set-up
 
-> You may try a demo version [here](https://noelkronenberg.pythonanywhere.com) (last commit: 0152f0b)
+> You may try a demo version [here](https://meeter.pythonanywhere.com)
 
 1. requirements: 
     - Python (tested: 3.9.10)
@@ -18,4 +18,4 @@ Users have to enter general information about themselves. The algorithm will the
 
 ## Showcase
 
-https://user-images.githubusercontent.com/79874249/212419134-f3e62dc1-fcd4-4f99-a45d-9aa86deaf2eb.mp4
+https://user-images.githubusercontent.com/79874249/229364123-b18955ff-f562-4f92-a882-7a437bbcd15d.mp4
