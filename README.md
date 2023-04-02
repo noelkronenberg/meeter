@@ -18,4 +18,4 @@ Users have to enter general information about themselves. The algorithm will the
 
 ## Showcase
 
-https://user-images.githubusercontent.com/79874249/229364123-b18955ff-f562-4f92-a882-7a437bbcd15d.mp4
+https://user-images.githubusercontent.com/79874249/229373864-47146549-e258-4a89-bc35-079afa61c575.mp4
